@@ -1,0 +1,45 @@
+openapi: 3.0.0
+info:
+  title: Smart Matching
+  version: '1.0'
+servers:
+  - url: 'https://lunch-lottery.com'
+paths:
+  /optin:
+    post:
+      summary: Opt-In
+      operationId: post-optin
+      responses:
+        '200':
+          description: OK
+      description: optin for a match session
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                matchSessionId:
+                  type: number
+                profile:
+                  $ref: '#/components/schemas/profile'
+              required:
+                - matchSessionId
+components:
+  schemas:
+    profile:
+      title: profile
+      type: object
+      properties:
+        firstName:
+          type: string
+        lastName:
+          type: string
+        email:
+          type: string
+        phone:
+          type: string
+      required:
+        - firstName
+        - email
+        - phone
