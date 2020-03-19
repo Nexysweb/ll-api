@@ -1,0 +1,48 @@
+{
+	"info": {
+		"_postman_id": "21a18029-0fe8-4a98-b947-81be8bf41758",
+		"name": "LL - generali",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "https://stoplight.io/p/mocks/12122/66462/optin",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "jhgf",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"matchSessionId\":456,\n  \"profile\":{\n  \"firstName\":\"fgh\",\n  \"email\":\"dfgh\",\n  \"phone\":\"dfg\"\n  }\n}"
+				},
+				"url": {
+					"raw": "https://stoplight.io/p/mocks/12122/66462/optin",
+					"protocol": "https",
+					"host": [
+						"stoplight",
+						"io"
+					],
+					"path": [
+						"p",
+						"mocks",
+						"12122",
+						"66462",
+						"optin"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
