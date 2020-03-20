@@ -3,7 +3,7 @@ info:
   title: Smart Matching
   version: '1.0'
 servers:
-  - url: 'https://lunch-lottery.com'
+  - url: 'https://app.lunch-lottery.com'
 paths:
   /optin:
     post:
@@ -11,7 +11,9 @@ paths:
       operationId: post-optin
       responses:
         '200':
-          description: OK
+          description: OK - all good
+        '400':
+          description: Bad Request if something is wrong with the body or the headers
       description: optin for a match session
       requestBody:
         content:
@@ -25,6 +27,12 @@ paths:
                   $ref: '#/components/schemas/profile'
               required:
                 - matchSessionId
+      parameters:
+        - schema:
+            type: string
+          in: header
+          name: Authorization
+          description: unique key per lunch
 components:
   schemas:
     profile:
