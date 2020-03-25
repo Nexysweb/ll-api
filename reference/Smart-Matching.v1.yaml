@@ -33,6 +33,7 @@ paths:
           in: header
           name: Authorization
           description: unique key per lunch
+          required: true
 components:
   schemas:
     profile:
